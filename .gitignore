@@ -1,0 +1,3 @@
+build/*
+container_utils/__pycache__/*
+.swp

@@ -2,17 +2,7 @@
 Create a containerized deployment of a Python package/application.
 """
 
-import csv
-import hashlib
-import os
-import subprocess
-import shutil
-import sys
-import re
 from distutils.core import Command
-from distutils.sysconfig import get_python_version
-from distutils import log as logger
-from shutil import rmtree
 
 import pkg_resources
 
@@ -33,9 +23,9 @@ class bdist_container(Command):
 
     description = 'create a container distribution'
 
-    user_options = [('hello=', None,
-                     "hello bdist"),
-                   ]
+    user_options = [
+            ('hello=', None, "hello bdist"),
+        ]
 
     def initialize_options(self):
         self.hello = None
